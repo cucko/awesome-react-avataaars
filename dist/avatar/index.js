@@ -24,26 +24,26 @@ var __rest = (this && this.__rest) || function (s, e) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Piece = exports.AvatarStyle = void 0;
 var React = require("react");
-var accessories_1 = require("./top/accessories");
+var uniqueId_1 = require("..//utils/uniqueId");
+var OptionContext_1 = require("../options/OptionContext");
+var Skin_1 = require("./Skin");
 var clothes_1 = require("./clothes");
 var face_1 = require("./face");
-var Skin_1 = require("./Skin");
 var top_1 = require("./top");
-var OptionContext_1 = require("../options/OptionContext");
-var uniqueId_1 = require("..//utils/uniqueId");
+var accessories_1 = require("./top/accessories");
 var AvatarStyle;
 (function (AvatarStyle) {
     AvatarStyle["Circle"] = "Circle";
     AvatarStyle["Transparent"] = "Transparent";
-})(AvatarStyle || (exports.AvatarStyle = AvatarStyle = {}));
+})(AvatarStyle = exports.AvatarStyle || (exports.AvatarStyle = {}));
 var AvatarComponent = function (_a) {
-    var avatarStyle = _a.avatarStyle, props = __rest(_a, ["avatarStyle"]);
+    var avatarStyle = _a.avatarStyle, className = _a.className, _b = _a.fillCircle, fillCircle = _b === void 0 ? '#65C9FF' : _b, props = __rest(_a, ["avatarStyle", "className", "fillCircle"]);
     var circle = avatarStyle === AvatarStyle.Circle;
     var maskPrefix1 = (0, uniqueId_1.getUniqueId)('react-masks-220');
     var maskPrefix2 = (0, uniqueId_1.getUniqueId)('react-masks-221');
     var pathPrefix1 = (0, uniqueId_1.getUniqueId)('react-masks-222');
     var pathPrefix2 = (0, uniqueId_1.getUniqueId)('react-masks-223');
-    return (React.createElement("svg", { style: props.style, width: "264px", height: "280px", viewBox: "0 0 264 280", version: "1.1", xmlns: "http://www.w3.org/2000/svg", xmlnsXlink: "http://www.w3.org/1999/xlink" },
+    return (React.createElement("svg", { style: props.style, className: className, width: "264px", height: "280px", viewBox: "0 0 264 280", version: "1.1", xmlns: "http://www.w3.org/2000/svg", xmlnsXlink: "http://www.w3.org/1999/xlink" },
         React.createElement("desc", null, "Created with getavataaars.com"),
         React.createElement("defs", null,
             React.createElement("circle", { id: "".concat(pathPrefix1, "-path-1"), cx: "120", cy: "120", r: "120" }),
@@ -56,7 +56,7 @@ var AvatarComponent = function (_a) {
                         React.createElement("mask", { id: "mask-2", fill: "white" },
                             React.createElement("use", { xlinkHref: "#".concat(pathPrefix1, "-path-1") })),
                         React.createElement("use", { id: "Circle-Background", fill: "#E6E6E6", xlinkHref: "#".concat(pathPrefix1, "-path-1") }),
-                        React.createElement("g", { id: "Color/Palette/Blue-01", mask: "url(#mask-2)", fill: "#65C9FF" },
+                        React.createElement("g", { id: "Color/Palette/Blue-01", mask: "url(#mask-2)", fill: fillCircle },
                             React.createElement("rect", { id: "\uD83D\uDD8DColor", x: "0", y: "0", width: "240", height: "240" })))) : null,
                     circle ? (React.createElement("mask", { id: "mask-4", fill: "white" },
                         React.createElement("use", { xlinkHref: "#".concat(pathPrefix2, "-path-3") }))) : null,

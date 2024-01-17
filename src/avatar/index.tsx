@@ -1,12 +1,12 @@
 import * as React from 'react'
 
-import Accessories from './top/accessories'
+import { getUniqueId } from '..//utils/uniqueId'
+import { OptionContext } from '../options/OptionContext'
+import Skin from './Skin'
 import Clothe from './clothes'
 import Face from './face'
-import Skin from './Skin'
 import Top from './top'
-import { OptionContext } from '../options/OptionContext'
-import { getUniqueId } from '..//utils/uniqueId'
+import Accessories from './top/accessories'
 
 export enum AvatarStyle {
   Circle = 'Circle',
@@ -16,10 +16,12 @@ export enum AvatarStyle {
 export interface AvatarProps {
   //todo: maybe expose the piece types also
   avatarStyle: AvatarStyle
+  fillCircle?: string
+  className?: string
   style?: React.CSSProperties
 }
 
-const AvatarComponent: React.FC<any> = ({ avatarStyle, ...props }) => {
+const AvatarComponent: React.FC<any> = ({ avatarStyle, className, fillCircle = '#65C9FF', ...props }) => {
   const circle = avatarStyle === AvatarStyle.Circle
   const maskPrefix1 = getUniqueId('react-masks-220')
   const maskPrefix2 = getUniqueId('react-masks-221')
@@ -28,6 +30,7 @@ const AvatarComponent: React.FC<any> = ({ avatarStyle, ...props }) => {
   return (
     <svg
       style={props.style}
+      className={className}
       width="264px"
       height="280px"
       viewBox="0 0 264 280"
@@ -73,7 +76,7 @@ const AvatarComponent: React.FC<any> = ({ avatarStyle, ...props }) => {
                 <g
                   id="Color/Palette/Blue-01"
                   mask="url(#mask-2)"
-                  fill="#65C9FF">
+                  fill={fillCircle}>
                   <rect id="🖍Color" x="0" y="0" width="240" height="240" />
                 </g>
               </g>

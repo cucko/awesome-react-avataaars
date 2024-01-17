@@ -5,6 +5,8 @@ export declare enum AvatarStyle {
 }
 export interface AvatarProps {
     avatarStyle: AvatarStyle;
+    fillCircle?: string;
+    className?: string;
     style?: React.CSSProperties;
 }
 declare const Avatar: React.FC<any>;
