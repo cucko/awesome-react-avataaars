@@ -30,13 +30,13 @@ var React = require("react");
 var BlazerShirt_1 = require("./BlazerShirt");
 var BlazerSweater_1 = require("./BlazerSweater");
 var CollarSweater_1 = require("./CollarSweater");
-var GraphicShirt_1 = require("./GraphicShirt");
+//import GraphicShirt from './GraphicShirt'
+var options_1 = require("../../options");
 var Hoodie_1 = require("./Hoodie");
 var Overall_1 = require("./Overall");
 var ShirtCrewNeck_1 = require("./ShirtCrewNeck");
 var ShirtScoopNeck_1 = require("./ShirtScoopNeck");
 var ShirtVNeck_1 = require("./ShirtVNeck");
-var options_1 = require("../../options");
 var Clothes = /** @class */ (function (_super) {
     __extends(Clothes, _super);
     function Clothes() {
@@ -47,7 +47,6 @@ var Clothes = /** @class */ (function (_super) {
             React.createElement(BlazerShirt_1.default, null),
             React.createElement(BlazerSweater_1.default, null),
             React.createElement(CollarSweater_1.default, null),
-            React.createElement(GraphicShirt_1.default, null),
             React.createElement(Hoodie_1.default, null),
             React.createElement(Overall_1.default, null),
             React.createElement(ShirtCrewNeck_1.default, null),
