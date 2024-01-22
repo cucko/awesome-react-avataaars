@@ -27,11 +27,11 @@ var __assign = (this && this.__assign) || function () {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
+var options_1 = require("../../options");
 var BlazerShirt_1 = require("./BlazerShirt");
 var BlazerSweater_1 = require("./BlazerSweater");
 var CollarSweater_1 = require("./CollarSweater");
-//import GraphicShirt from './GraphicShirt'
-var options_1 = require("../../options");
+var GraphicShirt_1 = require("./GraphicShirt");
 var Hoodie_1 = require("./Hoodie");
 var Overall_1 = require("./Overall");
 var ShirtCrewNeck_1 = require("./ShirtCrewNeck");
@@ -47,6 +47,7 @@ var Clothes = /** @class */ (function (_super) {
             React.createElement(BlazerShirt_1.default, null),
             React.createElement(BlazerSweater_1.default, null),
             React.createElement(CollarSweater_1.default, null),
+            React.createElement(GraphicShirt_1.default, null),
             React.createElement(Hoodie_1.default, null),
             React.createElement(Overall_1.default, null),
             React.createElement(ShirtCrewNeck_1.default, null),
