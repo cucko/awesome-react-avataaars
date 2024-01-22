@@ -1,0 +1,28 @@
+name: Makefile CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: technote-space/assign-author@v1.3.1
+    - uses: actions/checkout@v3
+    
+    - name: Install dependencies
+      run: npm i --legacy-peer-deps
+
+    - name: Release
+      run: |
+          git config --global user.email "dcucko@github.com" 
+          git config --global user.name "cucko" 
+          npm run build
+          git commit -am "Build"
+          git push
+          
