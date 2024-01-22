@@ -3,14 +3,14 @@ import * as React from 'react'
 import BlazerShirt from './BlazerShirt'
 import BlazerSweater from './BlazerSweater'
 import CollarSweater from './CollarSweater'
-import GraphicShirt from './GraphicShirt'
+//import GraphicShirt from './GraphicShirt'
+import { ClotheOption, Selector } from '../../options'
+import { PieceProps } from '../piece'
 import Hoodie from './Hoodie'
 import Overall from './Overall'
 import ShirtCrewNeck from './ShirtCrewNeck'
 import ShirtScoopNeck from './ShirtScoopNeck'
 import ShirtVNeck from './ShirtVNeck'
-import { ClotheOption, Selector } from '../../options'
-import { PieceProps } from '../piece'
 
 export default class Clothes extends React.Component<PieceProps> {
   render() {
@@ -22,7 +22,7 @@ export default class Clothes extends React.Component<PieceProps> {
         <BlazerShirt />
         <BlazerSweater />
         <CollarSweater />
-        <GraphicShirt />
+        {/* <GraphicShirt /> */}
         <Hoodie />
         <Overall />
         <ShirtCrewNeck />
