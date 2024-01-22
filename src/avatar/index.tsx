@@ -6,7 +6,7 @@ import Skin from './Skin'
 import Clothe from './clothes'
 import Face from './face'
 import Top from './top'
-import Accessories from './top/accessories'
+//import Accessories from './top/accessories'
 
 export enum AvatarStyle {
   Circle = 'Circle',
@@ -109,7 +109,7 @@ const AvatarComponent: React.FC<any> = ({ avatarStyle, className, fillCircle = '
               <Clothe />
               <Face />
               <Top>
-                <Accessories />
+                {/* <Accessories /> */}
               </Top>
             </g>
           </g>
