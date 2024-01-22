@@ -35,7 +35,7 @@ var AvatarStyle;
 (function (AvatarStyle) {
     AvatarStyle["Circle"] = "Circle";
     AvatarStyle["Transparent"] = "Transparent";
-})(AvatarStyle = exports.AvatarStyle || (exports.AvatarStyle = {}));
+})(AvatarStyle || (exports.AvatarStyle = AvatarStyle = {}));
 var AvatarComponent = function (_a) {
     var avatarStyle = _a.avatarStyle, className = _a.className, _b = _a.fillCircle, fillCircle = _b === void 0 ? '#65C9FF' : _b, props = __rest(_a, ["avatarStyle", "className", "fillCircle"]);
     var circle = avatarStyle === AvatarStyle.Circle;
