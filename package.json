@@ -1,6 +1,6 @@
 {
   "name": "awesome-react-avataaars",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This is the upgraded version of https://github.com/fangpenlin/avataaars",
   "main": "dist/avatar/index.js",
   "types": "dist/avatar/index.d.ts",
